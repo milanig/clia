@@ -10,6 +10,6 @@ setup(
     ],
     entry_points='''
         [console_scripts]
-        clia=clia.scripts.clia:clia_main
+        clia=scripts.clia:clia_main
     ''',
 )
