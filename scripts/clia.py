@@ -1,17 +1,21 @@
 import click
 
-@click.command()
-@click.option(
-    "--count", 
-    default=1,
-    help="Number of greetings."
+@click.group()
+def clia_main():
+    pass
+
+@clia_main.command()
+@click.argument(
+    "type-activity",
+    type=click.Choice(["task", "project"], case_sensitive=False)
 )
 @click.option(
-    "--name", 
-    prompt="Your name",
-    help="The person to greet."
+    "-n", "--name", 
+    prompt="Name of the activity or project",
+    help="The name of the activity."
 )
-def clia_main(count, name):
-    """Command Line Interface Assistant."""
-    for _ in range(count):
-        click.echo("Hello, %s!" % name)
+def start(type_activity, name):
+    """Start operations on tasks and projects."""
+    click.echo(type_activity)
+    click.echo(name)
+    pass
