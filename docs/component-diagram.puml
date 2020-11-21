@@ -1,0 +1,14 @@
+@startuml
+
+package "clia" {
+  [Main Interpreter]
+  [Utils]
+}
+
+
+
+database "Database" {
+  [People]
+}
+
+@enduml

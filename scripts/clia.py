@@ -1,4 +1,5 @@
 import click
+from . import db
 
 @click.group()
 def clia_main():
